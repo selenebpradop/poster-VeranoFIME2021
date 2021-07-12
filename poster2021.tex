@@ -1,0 +1,100 @@
+\RequirePackage{xcolor}
+\documentclass{sciposter}
+\usepackage{multicol,subfig,amsmath}
+\usepackage{graphicx,url,hyperref,doi}
+\usepackage[spanish]{babel}   
+\usepackage[utf8]{inputenc}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{tikz}
+\usepackage{algorithm} 
+\usepackage{algpseudocode} 
+\usepackage{listings}
+
+\tikzstyle{elem} = [draw, rectangle, thick, minimum height=2em, minimum width=2em]
+\tikzstyle{line} = [draw, thick, -stealth, shorten >=1pt]
+
+\setlength{\parskip}{3pt}
+\renewcommand{\arraystretch}{1.5}
+
+\title{Relación entre el número de ingresos hospitalarios y los niveles de contaminación}
+\author{Abraham Zaragoza$^\dagger$, Selene Prado$^\ddagger$, y Elisa Schaeffer}
+\institute {Posgrado en Ingeniería de Sistemas}
+\email{$^\dagger$ abraham.zaragozagrc@uanl.edu.mx, $^\ddagger$ selene.pradopr@uanl.edu.mx}
+
+\leftlogo[1]{uanl.png} 
+\rightlogo[1]{fime.png}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{pys}{
+    backgroundcolor=\color{white},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\bfseries\color{blue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\normalsize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=25pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=true,                  
+    tabsize=2
+}
+\renewcommand*{\lstlistingname}{Fragmento de código fuente}
+\lstset{style=pys}
+
+\begin{document}
+
+\conference{\includegraphics[width=40mm]{qr-code.png}
+\raisebox{8mm}{\large Verano Científico 2021 --- Facultad de Ingeniería Mecánica y Eléctrica --- Universidad Autónoma de Nuevo León}}
+
+\maketitle
+\begin{abstract}
+\end{abstract}
+
+\begin{multicols}{2} 
+
+\section{Introducción}
+
+En el presente proyecto se presenta un programa codificado en Python el cual realiza gráficos de telaraña de determinado conjunto de datos. Dicho programa tiene la finalidad de mostrar visualmente la relación entre el número de ingresos hospitalarios y los niveles de contaminación del aire.
+Se tienen los datos de ingresos hospitalarios desde el año 2010 hasta el año 2018, los cuales se obtuvieron de la base de datos de la Secretaría de Salud del Gobierno de México. También, se tienen los registros de los niveles de los contaminantes CO, NO, NO2, NOX, O3, PM10, y PM2.5 presentes en el área metropolitana de Monterrey de los años mencionados anteriormente, dichos registros fueron hechos por las estaciones: Sureste, Noreste, Centro, Noroeste, Suroeste, Noroeste2, Noreste2, Norte, Sureste2, Suroeste2, Sureste3, Norte2, y Sur.
+Se tiene la hipótesis que plantea una relación entre ingresos hospitalarios y el nivel de contaminantes presentes en el aire donde el número de de ingresos aumenta cuando el nivel de contaminantes incrementa. 
+El objetivo del presente trabajo es fomentar la regulación del nivel de contaminantes emitidos en el área metropolitana de Monterrey, así como estudiar la relación que tiene el aumento del nivel de contaminantes con la salud pública.
+
+\section{Antecedentes}
+
+
+\section{Estado de arte}
+
+Se señalo la deficiencia en las acciones del gobierno ante la contaminación del aire y como se ve reducido a reportar los niveles de toxicidad, asi como recomendar acciones en caso de contingencia ambiental. Haciendo uso de los datos del Comité Estatal de Vigilancia Epidemiologica del estado de Jalisco, asi como los datos obtenidos por el Sistema de Monitoreo Atmosférico de Jalisco [1], se obtuvo una correlación significativa para los contaminantes como el monoxido de carbono y particulas menores a 10 micras, las cuales infieren en mnayor manera a las Infecciones Respiratorias Agudas (IRAs). 
+En otros estudios se obtuvieron datos del Sistema Nacional de Ingormacion de la Calidad del Aire (Sinaica), asi como los cados de casos diarios de infeccion y mortalidad por SARS-CoV-2 en el periodo del 1 de abril del año 2019 al 20 de junio del año 2020, en 25 ciudades mexicanas. Explorando la asociación entre mortalidad y calidad del aire, asi como multiples comorbilidades. Estos datos fueron obtenidos del sitio oficial del coronavirus por la Secretaria de Salud. [2] 
+
+\section{Solución propuesta}
+
+\section{Experimentos}
+
+\section{Conclusiones}
+
+(Qué se logró hacer; qué posibilidad de trabajo a futuro se tiene para este trabajo.)
+
+\subsection*{Agradecimientos}
+
+El presente proyecto cuenta con el financiamiento del programa PAICYT-UANL.\\
+El póster se preparó con \url{https://www.overleaf.com/}.
+(Organismos que otorgaron beca. Las demás personas que no son autores que ayudaron en algo. El póster se preparó con \url{https://www.overleaf.com/}.)
+
+\end{multicols}
+
+\section{Referencias}
+[1] Peniche-Camps, S., & Cortez-Huerta, M. (2020). La costumbre al envenenamiento: El caso de los contaminantes atmosféricos de la ciudad de Guadalajara, México. Revista De Ciencias Ambientales, 54(2), 1-19. https://doi.org/10.15359/rca.54-2.1
+
+[2] Cabrera-Cano, Ángel A., Cruz-de la Cruz, J. C., Gloria-Alvarado, A. B., Álamo-Hernández, U., & Riojas-Rodríguez, H. (2021). Asociación entre mortalidad por Covid-19 y contaminación atmosférica en ciudades mexicanas: . Salud Pública De México, 63(4), 470-477. https://doi.org/10.21149/12355 
+
+\end{document}
