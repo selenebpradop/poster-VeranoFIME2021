@@ -14,9 +14,9 @@
 \renewcommand{\arraystretch}{1.5}
 
 \title{Relación entre el número de ingresos hospitalarios y los niveles de contaminación}
-\author{Abraham Zaragoza$^\dagger$, Selene Prado$^\ddagger$ y Elisa Schaeffer}
-\institute {Ingeniería en Tecnología de Software$^\dagger$$^\ddagger$, Posgrado en Ingeniería de Sistemas}
-\email{abraham.zaragozagrc@uanl.edu.mx $^\dagger$, selene.pradopr@uanl.edu.mx $^\ddagger$, elisa.schaeffer@uanl.edu.mx}
+\author{Abraham Zaragoza$^\dagger$, Selene Prado$^\ddagger$ y Elisa Schaeffer$^\ast$}
+\institute {Ingeniería en Tecnología de Software $^\dagger$$^\ddagger$, Posgrado en Ingeniería de Sistemas $^\ast$}
+\email{abraham.zaragozagrc@uanl.edu.mx $^\dagger$, selene.pradopr@uanl.edu.mx $^\ddagger$, elisa.schaeffer@uanl.edu.mx $^\ast$}
 \leftlogo[1]{uanl.png} 
 \rightlogo[1]{fime.png}
 
@@ -27,21 +27,21 @@
   \hfill
   \raisebox{2cm}[0cm]{\includegraphics[width=40mm]{qr-code.png}}
   \hfill
-  \raisebox{2cm}[0cm]{\includegraphics[width=80mm]{verano.png}}}
+  \raisebox{2cm}[0cm]{\includegraphics[width=100mm]{verano.png}}}
 
 \maketitle
 
 \begin{multicols}{2} 
 
 \begin{abstract}
-Se realizó una función codificada en Python 3.9 \citep{python} que realiza gráficos de telaraña de determinado conjunto de datos. Con ayuda de los datos de la Secretaría de Salud del Gobierno de México y de los registros de los niveles de los contaminantes presentes en el área metropolitana de Monterrey se pudieron elaborar gráficos de radar para mostrar visualmente la relación entre el número de ingresos hospitalarios y los niveles de NO2, NOX, PM10, y PM2.5 durante los años 2015, 2016, 2017, y 2018.
+Se presenta una función codificada en Python 3.9 \citep{python} que realiza gráficos de telaraña de determinado conjunto de datos. Como entrada se tienen datos de la Secretaría de Salud del Gobierno de México y registros de los niveles de los contaminantes presentes en el área metropolitana de Monterrey. Con ello se obtienen gráficos de radar para mostrar visualmente el número de ingresos hospitalarios y los niveles de NO2, NOX, PM10, y PM2.5 durante los años 2015, 2016, 2017, y 2018.
 \end{abstract}
 
 \section{Introducción}
 
-Se tienen los datos de ingresos hospitalarios desde el año 2015 hasta el año 2018, los cuales se obtuvieron de la base de datos de la Secretaría de Salud del Gobierno de México. También, se tienen los registros de los niveles de los contaminantes NO2, NOX, PM10, y PM2.5 presentes en el área metropolitana de Monterrey de los años mencionados anteriormente, dichos registros fueron hechos por las estaciones: Sureste, Noreste, Centro, Noroeste, Suroeste, Noroeste2, Noreste2, Norte, Sureste2, Suroeste2, Sureste3, Norte2, y Sur.
-Se tiene la hipótesis de que el número de de ingresos hospitalarios aumenta cuando el nivel de contaminantes incrementa. 
-El objetivo del presente trabajo es fomentar la regulación del nivel de contaminantes emitidos en el área metropolitana de Monterrey, así como estudiar la relación que tiene el aumento del nivel de contaminantes con la salud pública.
+Se tienen los datos de ingresos hospitalarios desde el año 2015 hasta el año 2018, los cuales provienen de la base de datos de la Secretaría de Salud del Gobierno de México. También se tienen los registros de los niveles de los contaminantes NO2, NOX, PM10, y PM2.5 presentes en el área metropolitana de Monterrey de los años mencionados anteriormente, dichos registros son hechos por las estaciones: Sureste, Noreste, Centro, Noroeste, Suroeste, Noroeste2, Noreste2, Norte, Sureste2, Suroeste2, Sureste3, Norte2, y Sur.
+Se tiene la hipótesis de que el número de de ingresos hospitalarios aumenta cuando los niveles de contaminación del aire incrementan. 
+El objetivo del presente proyecto es fomentar la regulación del nivel de contaminantes emitidos en el área metropolitana de Monterrey, así como explorar potenciales relaciones entre el aumento del nivel de contaminantes y la salud pública.
 
 \section{Antecedentes}
 
@@ -58,12 +58,12 @@ Algunos conceptos importantes a definir para este proyecto son:
 
 \section{Estado de arte}
 
-\citet{bib1} señala la deficiencia en las acciones del gobierno ante la contaminación del aire y como se ve reducido a reportar los niveles de toxicidad, asi como recomendar acciones en caso de contingencia ambiental. Haciendo uso de los datos del Comité Estatal de Vigilancia Epidemiologica del estado de Jalisco, asi como los datos obtenidos por el Sistema de Monitoreo Atmosférico de Jalisco, se obtuvo una correlación significativa para los contaminantes como el monoxido de carbono y particulas menores a 10 micras, las cuales infieren en mnayor manera a las Infecciones Respiratorias Agudas. 
+\citet{bib1} señala la deficiencia en las acciones del gobierno ante la contaminación del aire y como se ve reducido a reportar los niveles de toxicidad, asi como recomendar acciones en caso de contingencia ambiental. Haciendo uso de los datos del Comité Estatal de Vigilancia Epidemiologica del estado de Jalisco, asi como los datos obtenidos por el Sistema de Monitoreo Atmosférico de Jalisco, se obtiene una correlación significativa para los contaminantes como el monoxido de carbono y particulas menores a 10 micras, las cuales infieren en mayor manera a las Infecciones Respiratorias Agudas. 
 
 \section{Solución propuesta}
 
-Se creó una función llamada create\_spiderwebs que crea gráficos de radar a partir de conjuntos de datos. 
-La implementación se hizo en Python 3.9 \citep{python} y se puede acceder a dicho programa mediante el código QR que se encuentra en el presente trabajo. Los parametros que recibe dicha función se explican en el cuadro \ref{fparametros}. 
+Se tiene la función create\_spiderwebs que crea gráficos de radar a partir de conjuntos de datos. 
+La implementación está hecha en Python 3.9 \citep{python}. Se puede acceder al repositorio del presente trabajo mediante el código QR que se encuentra en la parte inferior, en dicho repositorio se encuentra el programa mencionado anteriormente. Los parametros que recibe dicha función se explican en el cuadro \ref{fparametros}. 
 
 \begin{table}
 \setcounter{table}{0} % por culpa de sciposter
@@ -97,13 +97,11 @@ La implementación se hizo en Python 3.9 \citep{python} y se puede acceder a dic
 \end{center}
 \end{table}
 
-Para el uso de dicha función se tuvieron que tratar los datos, para ello se utilizó Jupyter Notebook \citep{jupyter}. Las libretas se encuentran en el repositorio del presente trabajo.
-
-\columnbreak
+Para el tratamiento de los datos y el uso de la función se utiliza Jupyter Notebook \citep{jupyter}. Las libretas se encuentran en el repositorio del presente trabajo.
 
 \section{Experimentos}
 
-Se hicieron gráficas de radar de los niveles de los contaminantes de NO2, NOX, PM10, y PM2.5 durante las primeras 6 semanas de los años 2015, 2016, 2017, y 2018, dichas figuras se encuentran en el repositorio. En la figura \ref{contaminantes} se muestran los gráficos obtenidos de los años 2015 y 2017. 
+Se tienen gráficas de radar de los niveles de los contaminantes de NO2, NOX, PM10, y PM2.5 durante las primeras 6 semanas de los años 2015, 2016, 2017, y 2018, dichas figuras se encuentran en el repositorio. En la figura \ref{contaminantes} se muestran los gráficos obtenidos de los años 2015 y 2017. 
 
 \begin{figure}
 \setcounter{figure}{0} % por culpa de sciposter
@@ -117,7 +115,7 @@ Se hicieron gráficas de radar de los niveles de los contaminantes de NO2, NOX, 
     \label{contaminantes}
 \end{figure}
 
-Además, se hizo la figura \ref{ingresos} del número de ingresos hospitalarios durante las primeras 6 semanas de los años 2015, 2016, 2017, y 2018.
+La figura \ref{ingresos} muestra el número de ingresos hospitalarios durante las primeras 6 semanas de los años 2015, 2016, 2017, y 2018.
 
 \begin{figure}
 \setcounter{figure}{1} % por culpa de sciposter
@@ -137,7 +135,7 @@ En un próximo trabajo se pueden realizar gráficas de más semanas y extraer de
 
 \subsection*{Agradecimientos}
 
-El presente proyecto cuenta con el financiamiento del programa PAICYT-UANL bajo el código CE1842-21.\\
+Se cuenta con el financiamiento del programa PAICYT-UANL bajo las claves CE1421-20 y CE1842-21.\\
 El póster se preparó con \url{https://www.overleaf.com/}.
 
 \bibliography{poster}
