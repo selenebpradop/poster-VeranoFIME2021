@@ -1,2 +1,2 @@
 # poster-VeranoFIME2021
-Se creó un póster en OverLeaf
+Material elaborado para el programa Verano de Investigación Científica y Tecnológica, FIME 2021.
